@@ -34,12 +34,12 @@ for letter in range(nr_letters):
   #Or password_list.append(random.choice(letters))
 
 for symbol in range(nr_symbols):
-  password_list += symbols[random.randint(0, nr_symbols - 1)]
-  #Or password_list += random.choice(symbols)
+  #Or password_list += symbols[random.randint(0, nr_symbols - 1)]
+  password_list += random.choice(symbols)
 
 for number in range(nr_numbers):
-  password_list += numbers[random.randint(0, nr_numbers - 1)]
-  #Or password_list += random.choice(numbers)
+  #Or password_list += numbers[random.randint(0, nr_numbers - 1)]
+  password_list += random.choice(numbers)
 
 # print(password_list)
 random.shuffle(password_list)
