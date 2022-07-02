@@ -38,14 +38,14 @@ for symbol in range(nr_symbols):
   #Or password_list += random.choice(symbols)
 
 for number in range(nr_numbers):
-  passwordList += numbers[random.randint(0, nr_numbers - 1)]
+  password_list += numbers[random.randint(0, nr_numbers - 1)]
   #Or password_list += random.choice(numbers)
 
-# print(passwordList)
-random.shuffle(passwordList)
-# print(passwordList)
+# print(password_list)
+random.shuffle(password_list)
+# print(password_list)
 
 password = ""
-for char in passwordList:
+for char in password_list:
   password += char
 print(f"Your password is: {password}")
