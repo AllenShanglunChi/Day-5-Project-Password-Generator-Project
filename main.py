@@ -14,13 +14,13 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 #Eazy Level - Order not randomised:
 #e.g. 4 letter, 2 symbol, 2 number = JduE&!91
 # password = ""
-# for letter in range(1, nr_letters + 1):
+# for letter in range(nr_letters):
 #   password += letters[random.randint(0, nr_letters - 1)]
 
-# for symbol in range(1, nr_symbols + 1):
+# for symbol in range(nr_symbols):
 #   password += symbols[random.randint(0, nr_symbols - 1)]
 
-# for number in range(1, nr_numbers + 1):
+# for number in range(nr_numbers):
 #   password += numbers[random.randint(0, nr_numbers - 1)]
 
 # print(password)
@@ -28,15 +28,18 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 
-passwordList = []
-for letter in range(1, nr_letters + 1):
-  passwordList += letters[random.randint(0, nr_letters - 1)]
+password_list = []
+for letter in range(nr_letters):
+  password_list += letters[random.randint(0, nr_letters - 1)]
+  #Or password_list.append(random.choice(letters))
 
-for symbol in range(1, nr_symbols + 1):
-  passwordList += symbols[random.randint(0, nr_symbols - 1)]
+for symbol in range(nr_symbols):
+  password_list += symbols[random.randint(0, nr_symbols - 1)]
+  #Or password_list += random.choice(symbols)
 
-for number in range(1, nr_numbers + 1):
+for number in range(nr_numbers):
   passwordList += numbers[random.randint(0, nr_numbers - 1)]
+  #Or password_list += random.choice(numbers)
 
 # print(passwordList)
 random.shuffle(passwordList)
